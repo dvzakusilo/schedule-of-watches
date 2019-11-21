@@ -6,6 +6,8 @@ $error_color: red;
   div {
     margin: 0;
   }
+  display: flex;
+  flex-direction: column;
 
   .calendar {
     width: 150vh;
