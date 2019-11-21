@@ -4,74 +4,14 @@
 
 ## Installation
 
-`npm i visual-code-review `
+`npm i schedule-of-watches `
 
 ## Usage
 
-Simple json for example (visualcr.json): 
-```json
-{
-  "*": {
-    ".main__inner table": [
-      "Таблицы в контенте не допустимы!"
-    ],
-    "body > div.wrapper > main > section.section.mainReviews > div > div > a": [
-      "Нет страницы",
-      "alert"
-    ],
-    "body > div.wrapper > footer > div.footer__inner > div > div.footer__content.row > div:nth-child(2) > div > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)": [
-      "Нет страницы",
-      "alert"
-    ],
-    "#nav__list_header > li:nth-child(6) > a": [
-      "На всех страницах одинаковые цены",
-      "alert"
-    ],
-    ".header__btn": [
-      "Форма не валидируется",
-      "error"
-    ],
-    "body > div.wrapper > footer > div.footer__inner > div > div.footer__content.row > div:nth-child(3) > div.footer__text.footer__text_bottom > p > a:nth-child(2)": [
-      "Нет страницы",
-      "error"
-    ]
-  },
-  "http://site.com.loc/akcii/rannee-bronirovanie/": {
-    ".sidebarNews": [
-      "Наезжает на картинку."
-    ],
-    "body > div.wrapper > main > div > div > div:nth-child(2) > div.col-12.col-md-9 > div > ul:nth-child(10)": [
-      "некорректная верстка"
-    ]
-  }
-}
-```
-
-
-For js:
-```js
-document.addEventListener('DOMContentLoaded', function () {
-        const conf = {
-            "/": {
-                "#app": ["Кривая картинка"],
-                "#app2": ["Прекрасная ссылка", "success"],
-                "#app3": ["Так себе", "alert"]
-            }
-        };
-        let instance = new VisualCR();
-        instance.init(conf);
-    });
-```
-
-For webpack:
-```js
-       import $obVCRConfig from './visualcr.json';
-       import VCReview from 'visual-code-review';
-       
-       if(process.env.NODE_ENV !== 'production') {
-                   const $obVCR = new VCReview();
-                   $obVCR.init($obVCRConfig);
-               }
+```html
+<div id="app">
+    <Calendar :ar-names="['Иванов И.И.','Петров П.П.','Сидоров С.С.']"></Calendar>
+</div>
 ```
 
 ## Contributing

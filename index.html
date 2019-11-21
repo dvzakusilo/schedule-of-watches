@@ -24,23 +24,9 @@
     </style>
 </head>
 <body>
-<div id="app2">Хорошо</div>
-<div id="app3">Проблема</div>
-<div id="app">Ошибка</div>
-<script>
+<div id="schedule-of-watches">
+    <Calendar :ar-names="['Иванов И.И.','Петров П.П.','Сидоров С.С.']"></Calendar>
+</div>
 
-    document.addEventListener('DOMContentLoaded', function () {
-        const conf = {
-            "/": {
-                "#app": ["Кривая картинка"],
-                "#app2": ["Прекрасная ссылка", "success"],
-                "#app3": ["Так себе", "alert"]
-            }
-        };
-        let instance = new VisualCR();
-        instance.init(conf);
-    });
-
-</script>
 </body>
 </html>

@@ -1,10 +1,9 @@
-'use strict'
-
+'use strict';
+import Vue from 'vue'
 import './assets/styles.scss';
+import Calendar from "./lib/index"
 
-// import class
-import { VisualCR as defaultExport } from './lib/index';
+Vue.component('Calendar', Calendar);
 
 // export default class
-// I used `defaultExport` to state that variable name doesn't matter
-export default defaultExport;
+export default new Vue({el: '#schedule-of-watches'});
