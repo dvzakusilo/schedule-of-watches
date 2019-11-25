@@ -9,7 +9,7 @@
 ## Usage
 
 ```html
-<div id="app">
+<div id="schedule-of-watches">
     <Calendar :ar-names="['Иванов И.И.','Петров П.П.','Сидоров С.С.']"></Calendar>
 </div>
 ```
