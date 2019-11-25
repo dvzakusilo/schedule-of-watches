@@ -1,6 +1,6 @@
-# visual-code-review
+# shedule-of-watches
 
- Simple library for visual fixing of the revealed defects of imposition.
+ Vue.js schedule of watches.
 
 ## Installation
 
