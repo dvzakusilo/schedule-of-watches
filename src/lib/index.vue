@@ -42,6 +42,8 @@
                         weekend : obDate.getDay() === 0 || obDate.getDay() === 6,
                         select : getWatcher(obDate)  === sName,
                     }"
+                        v-bind:data-name="sName"
+                        v-bind:data-date="obDate.toDateString()"
                         v-for="sName in arNames"
                 >
                     &nbsp;
@@ -131,7 +133,7 @@
              * Дежурный в указанный день.
              */
             getWatcher(obDate) {
-                return this.arWatches[obDate.toLocaleString()];
+                return this.arWatches[obDate.toDateString()];
             }
         },
 
@@ -152,7 +154,7 @@
                     if (obDate.getDay() === 0 || obDate.getDay() === 6) {
                         return
                     }
-                    arWatches[obDate.toLocaleString()] = arNames[iNameKey];
+                    arWatches[obDate.toDateString()] = arNames[iNameKey];
                     iNameKey = arNames.length - 1 > iNameKey ? iNameKey + 1 : 0;
                 });
                 return arWatches;
